@@ -1,77 +1,70 @@
----
-name: '🚀 Feature / Enhancement Request'
-about: 'Propose a new feature, improvement, or architectural change.'
-labels: ['feature', 'enhancement', 'architecture']
----
+# Pull Request Template
 
-## 🌟 Pull Request: Elevating AIPostureCorrector-RealTime-HumanPoseAnalysis-WebPlatform
+**Before creating a pull request, please ensure you have done the following:**
 
-Before submitting, please ensure you have read and adhered to the project's [CONTRIBUTING.md](CONTRIBUTING.md) guidelines.
+1.  **Self-Review:** Read through your changes to ensure clarity and correctness.
+2.  **Branch Rebase:** Rebase your branch onto the latest `main` or `develop` branch.
+3.  **Tests Pass:** All automated tests (`npm test` or equivalent) pass.
+4.  **Linting/Formatting:** Ensure code adheres to project standards (`npm run lint`, `npm run format`).
+5.  **Commits:** Commits follow the Conventional Commits specification.
 
-### TL;DR (Too Long; Didn't Read) - A 2-sentence summary of this PR:
+--- 
 
----
+## 🚀 New Feature / 🐛 Bug Fix / ♻️ Refactor / 📝 Documentation
 
-## 📝 Detailed Description
+**(Choose one and delete the others)**
 
-*   **What does this PR introduce/change?**
-    *   _Clearly articulate the new functionality, modifications, or bug fixes._
+## 💡 Description
 
-*   **Why is this change necessary?**
-    *   _Explain the problem it solves, the feature it adds, or the architectural improvement it provides. Reference any related issues or discussions._
+*   **Briefly describe the purpose of this PR.**
+*   **What problem does it solve?**
+*   **What changes were made?**
 
-*   **How does it affect existing functionality or user experience?**
-    *   _Detail any potential impacts, breaking changes, or UI/UX shifts._
+## 🎯 Changes Implemented
 
-## ✅ Pre-flight Checklist (Mandatory)
+*   **List the key changes made in this PR.**
+    *   Example: Added user authentication module.
+    *   Example: Fixed layout issue on mobile view.
+    *   Example: Refactored `postService` for better performance.
 
-_Please check all that apply. If a point is not applicable, mark it as `[x]` and provide a brief explanation._
+## 🧪 How to Test
 
--   [ ] I have read the [CONTRIBUTING.md](CONTRIBUTING.md) document and understand the guidelines.
--   [ ] My code adheres to the project's established coding standards and style guides.
--   [ ] All new and existing unit tests pass locally with `vitest`.
--   [ ] All new and existing end-to-end tests pass locally with `playwright`.
--   [ ] My changes have been linted and formatted using `biome check --apply` (or equivalent for TypeScript).
--   [ ] I have updated the `README.md` (if necessary) to reflect any new features, configuration, or usage instructions.
--   [ ] I have added/updated relevant JSDoc comments for new or modified functions/components.
--   [ ] I have performed a self-review of my own code.
--   [ ] My changes introduce no new security vulnerabilities (e.g., XSS, SQLi, CSRF, insecure data handling).
--   [ ] My changes are fully accessible and meet WCAG 2.1 AA standards where applicable.
--   [ ] My changes optimize for performance and user experience (e.g., INP < 200ms, reduced bundle size).
--   [ ] All environment variables are documented and handled securely.
--   [ ] I have updated the change log / release notes if this is a user-facing change (or will do so in a follow-up PR).
+*   **Provide clear steps for reviewers to test your changes.**
+*   **Include any specific configurations or data needed.**
 
-## 🧪 How Has This Been Tested?
+```bash
+# Example testing steps:
+1. Clone the repository and checkout this branch.
+2. Run `npm install`.
+3. Start the development server: `npm run dev`.
+4. Navigate to /profile and verify the updated UI.
+5. Execute `npm test` to confirm all tests pass.
+```
 
-_Please describe the tests that you ran to verify your changes. Provide instructions so we can reproduce._
+## 🖼️ Screenshots / Videos (If applicable)
 
-*   **Unit Tests:**
-    *   `npm test` (or `vitest` equivalent)
-    *   _Specify any new/modified test files and what they cover._
+*   **(Optional) Include screenshots or recordings to visualize UI changes.**
 
-*   **End-to-End Tests:**
-    *   `npm run test:e2e` (or `playwright` equivalent)
-    *   _Specify any new/modified test files and what scenarios they validate._
+## ✅ Checklist
 
-*   **Manual Testing Steps:**
-    1.  _Step 1: Go to `[URL/Route]`._
-    2.  _Step 2: Interact with `[UI Element]`._
-    3.  _Step 3: Verify `[Expected Outcome]`._
+*   [ ] My code adheres to the project's coding standards and style guides.
+*   [ ] I have performed a self-review of my own code.
+*   [ ] I have commented my code, particularly in hard-to-understand areas.
+*   [ ] I have made corresponding changes to the documentation (if applicable).
+*   [ ] My changes generate no new warnings or errors in the console.
+*   [ ] I have added tests that prove my fix is effective or that my feature works.
+*   [ ] New and existing unit tests pass locally with my changes.
+*   [ ] Any dependent components have been updated and tested.
+*   [ ] I have updated relevant dependencies (if applicable).
+*   [ ] I have considered security implications and followed DevSecOps protocols.
+*   [ ] The README has been updated to reflect changes (if applicable).
 
-*   **Screenshots/Gifs (if applicable):**
+## 🔗 Related Issues
 
-## 🔗 Linked Issues
+*   Closes #<issue_number>
+*   Related to #<issue_number>
 
-_Please link any related issues here, e.g., `Closes #123`, `Fixes #456`, `Resolves #789`._
+--- 
+--- 
 
-*   #
-
-## 👥 Reviewers
-
-_Please list any specific individuals or teams you'd like to review this PR._
-
-*   @
-
-## 🚀 Deployment Notes (if applicable)
-
-_Are there any specific deployment considerations, database migrations, or environment variable updates required for this PR?_
+**Thank you for contributing to PostureGuard-AI-Human-Posture-Analysis-Web-Platform!**
