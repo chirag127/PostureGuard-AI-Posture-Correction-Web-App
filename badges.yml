@@ -1,0 +1,36 @@
+badges:
+  - name: Build Status
+    url: https://img.shields.io/github/workflow/status/chirag127/PostureGuard-AI-Posture-Correction-Web-App/ci.yml?style=flat-square&label=Build
+    markdown: "[![Build Status](https://img.shields.io/github/workflow/status/chirag127/PostureGuard-AI-Posture-Correction-Web-App/ci.yml?style=flat-square&label=Build)](https://github.com/chirag127/PostureGuard-AI-Posture-Correction-Web-App/actions/workflows/ci.yml)"
+
+  - name: Code Coverage
+    url: https://img.shields.io/codecov/c/github/chirag127/PostureGuard-AI-Posture-Correction-Web-App?style=flat-square
+    markdown: "[![Code Coverage](https://img.shields.io/codecov/c/github/chirag127/PostureGuard-AI-Posture-Correction-Web-App?style=flat-square)](https://codecov.io/gh/chirag127/PostureGuard-AI-Posture-Correction-Web-App)"
+
+  - name: Language
+    url: https://img.shields.io/github/languages/top/chirag127/PostureGuard-AI-Posture-Correction-Web-App?style=flat-square
+    markdown: "[![Language](https://img.shields.io/github/languages/top/chirag127/PostureGuard-AI-Posture-Correction-Web-App?style=flat-square)](https://github.com/chirag127/PostureGuard-AI-Posture-Correction-Web-App)"
+
+  - name: License
+    url: https://img.shields.io/github/license/chirag127/PostureGuard-AI-Posture-Correction-Web-App?style=flat-square
+    markdown: "[![License](https://img.shields.io/github/license/chirag127/PostureGuard-AI-Posture-Correction-Web-App?style=flat-square&color=blueviolet)](LICENSE)"
+
+  - name: Tech Stack (TS)
+    url: https://img.shields.io/badge/TS-TypeScript-3178C6?style=flat-square
+    markdown: "[![Tech Stack](https://img.shields.io/badge/TS-TypeScript-3178C6?style=flat-square)]()"
+
+  - name: Framework (React/Vite)
+    url: https://img.shields.io/badge/Frontend-React%20%7C%20Vite-FF6B6B?style=flat-square
+    markdown: "[![Framework](https://img.shields.io/badge/Frontend-React%20%7C%20Vite-FF6B6B?style=flat-square)]()"
+
+  - name: Desktop Runtime (Tauri)
+    url: https://img.shields.io/badge/Runtime-Tauri%20v2-805AD5?style=flat-square
+    markdown: "[![Runtime](https://img.shields.io/badge/Runtime-Tauri%20v2-805AD5?style=flat-square)]()"
+
+  - name: Linter/Formatter (Biome)
+    url: https://img.shields.io/badge/Linter-Biome-0066FF?style=flat-square
+    markdown: "[![Linter](https://img.shields.io/badge/Linter-Biome-0066FF?style=flat-square)]()"
+
+  - name: GitHub Stars
+    url: https://img.shields.io/github/stars/chirag127/PostureGuard-AI-Posture-Correction-Web-App?style=flat-square
+    markdown: "[![GitHub Stars](https://img.shields.io/github/stars/chirag127/PostureGuard-AI-Posture-Correction-Web-App?style=flat-square)](https://github.com/chirag127/PostureGuard-AI-Posture-Correction-Web-App)"
