@@ -8,156 +8,119 @@
 
 ---
 
-## 2. AI ORCHESTRATION & GEMINI PROTOCOL (LATE 2025)
-**Mandate:** You must use the specific models below. Strictly follow this **Fallback Cascade**. Always try the smartest model first.
-* **Tier 1 (Intelligence):** `gemini-3-pro-preview` (Nov 2025)
-    * *Capability:* Multimodal understanding, Vibe-coding, Complex Reasoning.
-    * *Context:* 1M Input / 65k Output.
-* **Tier 2 (Reasoning/STEM):** `gemini-2.5-pro` (Stable)
-    * *Capability:* Advanced thinking, Codebases, Math.
-    * *Context:* 1M Input / 65k Output.
-* **Tier 3 (Balanced Speed):** `gemini-2.5-flash` (Stable)
-    * *Capability:* Large scale processing, Agentic use cases.
-    * *Context:* 1M Input / 65k Output.
-* **Tier 4 (Ultra-Fast/Cost):** `gemini-2.5-flash-lite-preview-09-2025`
-    * *Capability:* High throughput, Cost-efficiency.
-    * *Context:* 1M Input / 65k Output.
-* **Tier 5 (Legacy/Specialized):**
-    * `gemini-2.0-flash` (Workhorse fallback).
-    * `gemini-2.5-flash-native-audio-preview-09-2025` (Audio I/O).
-* **Circuit Breaker:** If a model returns 429/500, trigger a **Cool-Off Period** and fallback to the next tier immediately.
-* **Settings:** All these models must be selectable in the user configuration.
+## 2. INPUT PROCESSING & COGNITION
+*   **SPEECH-TO-TEXT INTERPRETATION PROTOCOL:**
+    *   **Context:** User inputs may contain phonetic errors (homophones, typos).
+    *   **Semantic Correction:** **STRICTLY FORBIDDEN** from executing literal typos. You must **INFER** technical intent based on the project context.
+    *   **Logic Anchor:** Treat the `README.md` as the **Single Source of Truth (SSOT)**.
+*   **MANDATORY MCP INSTRUMENTATION:**
+    *   **No Guessing:** Do not hallucinate APIs.
+    *   **Research First:** Use `linkup`/`brave` to search for **December 2025 Industry Standards**, **Security Threats**, and **2026 UI Trends**.
+    *   **Validation:** Use `docfork` to verify *every* external API signature.
+    *   **Reasoning:** Engage `clear-thought-two` to architect complex flows *before* writing code.
 
 ---
 
 ## 3. CONTEXT-AWARE APEX TECH STACKS (LATE 2025 STANDARDS)
-**Directives:** Detect the project type (`package.json`, `Cargo.toml`, `pyproject.toml`) and apply the corresponding **Apex Toolchain**.
-* **SCENARIO A: WEB / APP / EXTENSION (TypeScript)**
-    * **Stack:** **TypeScript 6.x** (Strict), **Vite 7** (Rolldown), **Tauri v2.x** (Native), **WXT** (Extensions).
-    * **State:** **Signals** (Standardized).
-    * **Lint/Test:** **Biome** (Speed) + **Vitest** (Unit) + **Playwright** (E2E).
-* **SCENARIO B: SYSTEMS / PERFORMANCE (Rust/Go)**
-    * **Stack:** **Rust 1.8x** (Cargo) or **Go 1.2x**.
-    * **Lint:** **Clippy** / **GolangCI-Lint**.
-* **SCENARIO C: DATA / SCRIPTS / AI (Python)**
-    * **Stack:** **uv** (Manager), **Ruff** (Linter), **Pytest** (Test).
-    * **Project Specific:** `PostureGuard-AI-Human-Posture-Analysis-Web-Platform` is a Web/Frontend application utilizing JavaScript/TypeScript for the front end and likely a machine learning model runner (e.g., TensorFlow.js or ONNX Runtime Web). Therefore, the **Apex Toolchain for Scenario A** is applied, with specific attention to WebGL/WebRTC integration necessary for computer vision.
+**Directives:** Detect the project type and apply the corresponding **Apex Toolchain**. This repository, `PostureGuard-AI-Posture-Correction-Web-App`, is a modern web application leveraging TypeScript and Tauri.
+
+*   **PRIMARY SCENARIO: WEB / APP / GUI (Modern Frontend)**
+    *   **Stack:** This project utilizes **TypeScript 6.x** (with strict configuration), **Vite 7** (powered by Rolldown for build speed), **Tailwind CSS v4** (for utility-first styling), and **Tauri v2.x** (for native desktop application packaging). 
+    *   **Linting & Formatting:** **Biome** is the mandated tool for extremely fast linting, formatting, and code analysis.
+    *   **Testing:** **Vitest** handles unit and integration tests, while **Playwright** is utilized for end-to-end (E2E) testing.
+    *   **Architecture:** Employs the **Feature-Sliced Design (FSD)** pattern for robust modularity and maintainability.
+    *   **AI Integration:** Integrates with **OpenCV.js** or a similar client-side computer vision library for real-time pose estimation directly in the browser. **Cloud-based AI APIs (e.g., Google Cloud Vision, AWS Rekognition)** may be used for more complex analysis if client-side processing is insufficient, prioritizing privacy and performance.
+    *   **State Management:** Leverages **Signals** as the standardized approach for reactive state management.
+
+*   **SECONDARY SCENARIO B: SYSTEMS / PERFORMANCE (Low Level) - *Not directly applicable. Reference only.***
+    *   **Stack:** Rust (Cargo) or Go (Modules).
+    *   **Lint:** Clippy / GolangCI-Lint.
+    *   **Architecture:** Hexagonal Architecture (Ports & Adapters).
+
+*   **TERTIARY SCENARIO C: DATA / AI / SCRIPTS (Python) - *Not directly applicable. Reference only.***
+    *   **Stack:** uv (Manager), Ruff (Linter), Pytest (Test).
+    *   **Architecture:** Modular Monolith or Microservices.
 
 ---
 
-## 4. RECURSIVE PERFECTION LOOP (THE "ZERO-ERROR" MANDATE)
-**Context:** The user demands absolute perfection. You must not stop until the codebase is pristine.
-**The Loop:**
-1.  **Analyze:** Scan the codebase.
-2.  **Fix:** Apply architectural patterns and fixes.
-3.  **Lint/Format:** Run `biome check --apply` / `ruff check --fix`.
-4.  **Test:** Run `vitest` / `pytest`.
-5.  **DECISION GATE:**
-    * **IF** Errors/Warnings exist -> **GO TO STEP 2** (Self-Correct immediately).
-    * **IF** Clean -> **COMMIT** and Present.
-**Constraint:** **DO NOT STOP** until the build is perfectly clean.
+## 4. DEVELOPMENT & VERIFICATION PROTOCOLS
+*   **Setup:** Standardized `git clone`, followed by `uv install` (or `npm install`/`yarn install` if primarily frontend). Execute `biome ci` for linting and formatting checks.
+*   **Execution:** Run development servers via Vite (`vite`) or application entry points (`cargo run`, `go run`, `python main.py`).
+*   **Testing:** Execute all tests using `vitest` (unit/integration) and `npx playwright test` (E2E). Ensure `cargo test` or `pytest` are used for respective stacks.
+*   **Build:** Utilize `tauri build` for native application packaging, `vite build` for frontend assets, or standard build tools for other languages.
 
 ---
 
-## 5. CORE ARCHITECTURAL PRINCIPLES
-* **SOLID MANDATE:** SRP, OCP, LSP, ISP, DIP.
-* **MODULARITY:** Feature-First Structure (`features/auth`), not type.
-* **CQS:** Methods must be **Commands** (Action) or **Queries** (Data), never both.
-* **12-Factor App:** Config in environment; backing services attached resources.
+## 5. ARCHITECTURAL PRINCIPLES (THE HOLY TRINITY)
+*   **SOLID:** Maintain high cohesion, low coupling. Ensure Open/Closed, Liskov Substitution, Interface Segregation, and Dependency Inversion principles are paramount.
+*   **DRY (Don't Repeat Yourself):** Abstract common logic into reusable modules, functions, or classes. Avoid code duplication at all costs.
+*   **YAGNI (You Ain't Gonna Need It):** Implement only what is necessary for current requirements. Avoid speculative design and premature optimization.
 
 ---
 
-## 6. CODE HYGIENE & STANDARDS (READABILITY FIRST)
-* **SEMANTIC NAMING PROTOCOL:**
-    * **Descriptive Verbs:** `calculateWeeklyPay` (Good) vs `calc` (Bad).
-    * **Casing:** `camelCase` (JS/TS), `snake_case` (Python), `PascalCase` (Classes).
-* **CLEAN CODE RULES:**
-    * **Verticality:** Optimize for reading down.
-    * **No Nesting:** Use **Guard Clauses** (`return early`).
-    * **DRY & KISS:** Automate repetitive tasks. Keep logic simple.
-    * **Zero Comments:** Code must be **Self-Documenting**. Use comments *only* for "Why".
+## 6. AI AGENT DIRECTIVES (THE 'AGENTS.MD' CONTRACT)
+**THIS SECTION IS CRITICAL FOR ALL AI AGENTS INTERACTING WITH THIS REPOSITORY.**
+
+<details>
+<summary><strong>AI AGENT DIRECTIVES</strong></summary>
+
+**Repository Name:** `PostureGuard-AI-Posture-Correction-Web-App`
+**Primary Function:** AI-powered real-time posture correction analysis via webcam.
+**Username:** `chirag127`
+**Repository URL:** `https://github.com/chirag127/PostureGuard-AI-Posture-Correction-Web-App`
+
+**Technology Stack:**
+*   **Language:** TypeScript 6.x
+*   **Build Tool:** Vite 7
+*   **Styling:** Tailwind CSS v4
+*   **Native Packaging:** Tauri v2.x
+*   **Linting/Formatting:** Biome
+*   **Testing:** Vitest (Unit/Integration), Playwright (E2E)
+*   **Computer Vision:** OpenCV.js (Client-side), Potentially Cloud AI APIs
+*   **State Management:** Signals
+
+**Architectural Patterns:**
+*   **Feature-Sliced Design (FSD):** Organize code into features, layers, and slices for scalability and maintainability.
+*   **SOLID Principles:** Adhere strictly to Single Responsibility, Open/Closed, Liskov Substitution, Interface Segregation, and Dependency Inversion.
+*   **DRY:** Minimize code duplication.
+*   **YAGNI:** Implement only necessary features.
+
+**Key Workflow Commands:**
+*   **Clone Repository:** `git clone https://github.com/chirag127/PostureGuard-AI-Posture-Correction-Web-App.git`
+*   **Install Dependencies:** `npm install` or `yarn install`
+*   **Lint & Format Check:** `biome ci`
+*   **Run Development Server:** `npm run dev` or `yarn dev`
+*   **Run Unit/Integration Tests:** `npm run test` or `yarn test` (for Vitest)
+*   **Run E2E Tests:** `npm run test:e2e` or `yarn test:e2e` (for Playwright)
+*   **Build Application:** `npm run build` or `yarn build`
+*   **Package Native App:** `npm run tauri:build` or `yarn tauri:build`
+
+**AI Model Interaction:**
+*   **Primary CV Library:** OpenCV.js (ensure version compatibility)
+*   **Posture Estimation Model:** Utilize pre-trained models (e.g., MoveNet, PoseNet) integrated with OpenCV.js or provide clear instructions for model loading.
+*   **Cloud API Usage (If applicable):** Configure API keys securely via environment variables (`.env`). Refer to `src/services/ai-api.ts` for abstraction layer.
+
+**Security Mandates:**
+*   **Client-Side Data:** Minimize sensitive data processed client-side. If webcam data is processed locally, ensure it is ephemeral.
+*   **API Keys:** Never hardcode API keys. Use `.env` files and Tauri's secure asset handling.
+*   **Dependency Management:** Regularly scan dependencies for vulnerabilities using `npm audit` or `yarn audit`.
+
+**Verifications:**
+*   **Linting:** `biome check --apply` (to auto-fix where applicable).
+*   **Type Checking:** `tsc --noEmit`.
+*   **E2E Testing:** `npx playwright test` must pass for all core user flows.
+
+**DO NOT:**
+*   Introduce legacy technologies.
+*   Ignore linting/formatting errors.
+*   Hardcode sensitive information.
+*   Introduce breaking changes without thorough E2E testing.
+
+</details>
 
 ---
 
-## 7. RELIABILITY, SECURITY & SUSTAINABILITY
-* **DEVSECOPS PROTOCOL:**
-    * **Zero Trust:** Sanitize **ALL** inputs (OWASP Top 10 2025).
-    * **Supply Chain:** Generate **SBOMs** for all builds.
-    * **Fail Fast:** Throw errors immediately on invalid state.
-    * **Encryption:** Secure sensitive data at rest and in transit.
-* **EXCEPTION HANDLING:**
-    * **Resilience:** App must **NEVER** crash. Wrap critical I/O in `try-catch-finally`.
-    * **Recovery:** Implement retry logic with exponential backoff.
-* **GREEN SOFTWARE:**
-    * **Rule of Least Power:** Choose the lightest tool for the job.
-    * **Efficiency:** Optimize loops ($O(n)$ over $O(n^2)$).
-    * **Lazy Loading:** Load resources only when needed.
-
----
-
-## 8. COMPREHENSIVE TESTING STRATEGY
-* **FOLDER SEPARATION PROTOCOL:**
-    * **Production Purity:** Source folder is for code ONLY.
-    * **Mirror Structure:** Tests reside exclusively in `tests/`.
-* **TESTING PYRAMID (F.I.R.S.T.):**
-    * **Fast:** Tests run in milliseconds.
-    * **Isolated:** No external dependencies (Mock DB/Network).
-    * **Repeatable:** Deterministic results.
-* **COVERAGE MANDATE:**
-    * **1:1 Mapping:** Every source file **MUST** have a corresponding test file.
-    * **Scenario Coverage:** Test **Success**, **Failure**, and **Edge Cases**.
-    * **Zero-Error Standard:** Software must run with 0 console errors.
-
----
-
-## 9. UI/UX AESTHETIC SINGULARITY (2026 STANDARD)
-* **VISUAL LANGUAGE:**
-    * **Style:** Blend **Liquid Glass** + **Neo-Brutalist** + **Material You 3.0**.
-    * **Motion:** **MANDATORY** fluid animations (`transition: all 0.2s`).
-* **PERFORMANCE UX:**
-    * **INP Optimization:** Interaction to Next Paint < 200ms.
-    * **Optimistic UI:** UI updates instantly; server syncs in background.
-* **INTERACTION DESIGN:**
-    * **Hyper-Personalization:** Adapt layouts based on user behavior.
-    * **Micro-interactions:** Every click/hover must have feedback.
-* **HYPER-CONFIGURABILITY:**
-    * **Mandate:** Every feature/color must be user-configurable via Settings.
-
----
-
-## 10. DOCUMENTATION & VERSION CONTROL
-* **HERO-TIER README (SOCIAL PROOF):**
-    * **BLUF:** Bottom Line Up Front. Value prop first.
-    * **Live Sync:** Update README **IN THE SAME TURN** as code changes.
-    * **Visuals:** High-Res Badges (Shields.io), ASCII Architecture Trees.
-    * **AI Replication Block:** Include `<details>` with stack info for other agents.
-    * **Social Proof:** Explicitly ask users to **"Star ⭐ this Repo"**.
-* **ADVANCED GIT OPERATIONS:**
-    * **Context Archaeology:** Use `git log`/`git blame`.
-    * **Conventional Commits:** Strict format (`feat:`, `fix:`, `docs:`).
-    * **Semantic Versioning:** Enforce `Major.Minor.Patch`.
-
----
-
-## 11. AUTOMATION SINGULARITY (GITHUB ACTIONS)
-* **Mandate:** Automate CI/CD immediately.
-* **Workflows:**
-    1.  **Integrity:** Lint + Test on Push.
-    2.  **Security:** Audit dependencies + SBOM.
-    3.  **Release:** Semantic Versioning + Artifact Upload.
-    4.  **Deps:** Auto-merge non-breaking updates.
-
----
-
-## 12. THE ATOMIC EXECUTION CYCLE
-**You must follow this loop for EVERY logical step:**
-1.  **Audit:** Scan state (`ls -R`) & History (`git log`).
-2.  **Research:** Query Best Practices & Trends.
-3.  **Plan:** Architect via `clear-thought-two`.
-4.  **Act:** Fix Code + Polish + Add Settings + Write Tests.
-5.  **Automate:** Create/Update CI/CD YAMLs.
-6.  **Docs:** Update `README.md` (Replication Ready).
-7.  **Verify:** Run Tests & Linters.
-8.  **REITERATE:** If *any* error/warning exists, fix it immediately.
-    **DO NOT STOP** until the build is perfectly clean.
-9.  **Commit:** `git commit` immediately (Only when clean).
+## 7. AGENTS.MD VALIDATION PROTOCOL
+*   **Self-Referential Integrity:** This document (`AGENTS.MD`) must be the source of truth for AI agent directives.
+*   **Dynamic Updates:** Any modifications to the tech stack, architecture, or key commands MUST be reflected here *immediately*.
+*   **Consistency Enforcement:** Ensure all generated files (README, workflows, etc.) align with the directives herein.
