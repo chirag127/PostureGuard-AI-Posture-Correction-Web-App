@@ -1,46 +1,45 @@
-# Security Policy
+# Security Policy for PostureGuard
+
+The PostureGuard team and community take the security of our application very seriously. We appreciate your efforts to responsibly disclose your findings, and we will make every effort to acknowledge your contributions.
 
 ## Supported Versions
 
-We are committed to providing a secure product. For the most up-to-date information on supported versions and known vulnerabilities, please refer to our **[GitHub Security Advisories](https://github.com/chirag127/PostureGuard-AI-Posture-Correction-Web-App/security/advisories)**.
+Only the latest stable version of PostureGuard is actively supported with security updates. We encourage all users to stay on the most recent release to benefit from the latest features and security patches.
 
-As of December 2025, the following versions are actively supported and regularly patched:
-
-*   **Main Branch Development:** All code deployed from the `main` branch is considered actively developed and will receive prompt security updates.
+| Version | Supported          |
+| ------- | ------------------ |
+| 1.x.x   | :white_check_mark: |
+| < 1.0.0 | :x:                |
 
 ## Reporting a Vulnerability
 
-We appreciate your efforts to responsibly disclose security vulnerabilities. Please report any suspected vulnerabilities through the following channels:
+We are committed to working with the community to verify and address any potential vulnerabilities. Please follow this process for reporting:
 
-1.  **GitHub Security Advisories:** The preferred method is to submit a **private vulnerability report** through GitHub's security advisory feature. This ensures that the vulnerability is handled securely and responsibly before public disclosure.
-    *   **Submit a Report:** [https://github.com/chirag127/PostureGuard-AI-Posture-Correction-Web-App/security/advisories/new](https://github.com/chirag127/PostureGuard-AI-Posture-Correction-Web-App/security/advisories/new)
+**DO NOT report security vulnerabilities through public GitHub issues.**
 
-2.  **Email:** If you are unable to use the GitHub feature, you can also send an email to our security team at **security@apex-architects.dev**. Please use a clear subject line such as "Security Vulnerability Report - PostureGuard-AI-Posture-Correction-Web-App".
+Instead, please use the **private vulnerability reporting feature** provided by GitHub.
 
-When reporting a vulnerability, please provide as much detail as possible, including:
+1.  Navigate to the [**Security Advisories**](https://github.com/chirag127/PostureGuard-AI-Posture-Correction-Desktop-App/security/advisories) tab in our repository.
+2.  Click on the **"Report a vulnerability"** button to open a new advisory.
+3.  Please provide as much information as possible in your report, including:
+    *   A clear and concise description of the vulnerability.
+    *   The type of vulnerability (e.g., Cross-Site Scripting, Remote Code Execution, etc.).
+    *   The version of PostureGuard affected.
+    *   Step-by-step instructions to reproduce the issue.
+    *   Any proof-of-concept code, screenshots, or logs that can help us understand the impact.
 
-*   A clear description of the vulnerability.
-*   Steps to reproduce the vulnerability.
-*   The impact of the vulnerability.
-*   Any suggested mitigation or remediation steps.
-*   Proof-of-concept code (if applicable).
+### Our Commitment
 
-## Disclosure Timeline
+-   We will endeavor to acknowledge receipt of your vulnerability report within **48 hours**.
+-   We will provide you with regular updates on our progress in investigating and patching the vulnerability.
+-   We will publicly credit you for your discovery (unless you prefer to remain anonymous) once the vulnerability has been addressed.
 
-We aim to acknowledge all security reports within **48 hours**. We will work with security researchers to understand and address reported vulnerabilities in a timely manner. We generally aim to resolve critical vulnerabilities within **14 days**, with a target of **30 days** for less critical issues. Significant vulnerabilities will be disclosed publicly after a fix has been released, following industry best practices.
+## Security Architecture & Practices
 
-## Security Best Practices
+PostureGuard is built on a modern and security-conscious technology stack, including [Tauri](https://tauri.app/v1/references/security/), which leverages Rust for the backend. This architecture helps mitigate many common vulnerabilities found in traditional desktop applications.
 
-*   **TypeScript (Strict Mode):** Always use TypeScript in strict mode (`"strict": true` in `tsconfig.json`) to catch potential type errors at compile time, reducing runtime bugs and security risks.
-*   **Biome / Ruff:** Ensure these linters and formatters are configured to enforce secure coding standards and catch common vulnerabilities. Run them frequently (`npm run lint`, `npm run format`).
-*   **Tauri Security:** Follow Tauri's official security guidelines for native application development. Be cautious when interacting with the operating system and avoid exposing sensitive APIs unnecessarily.
-*   **Input Validation:** Rigorously validate all user inputs and data received from external sources to prevent injection attacks and unexpected behavior.
-*   **Dependency Management:** Regularly update all project dependencies using `uv` (or equivalent package manager) to incorporate the latest security patches. Use `uv audit` or similar tools to check for known vulnerabilities.
-*   **AI Model Security:** When interacting with AI models, sanitize inputs to prevent prompt injection attacks. Be mindful of data privacy and avoid sending sensitive information to third-party AI services unless absolutely necessary and properly secured.
-*   **Secrets Management:** Never commit sensitive information (API keys, passwords, private certificates) directly into the codebase. Use environment variables or a dedicated secrets management solution.
+We also utilize automated tools to enhance our security posture:
+-   **Dependabot:** For automated dependency scanning and updates to keep our third-party libraries secure.
+-   **GitHub Actions:** Our CI/CD pipeline includes steps for static analysis and code scanning to catch potential issues before they reach production.
 
-## Security Tools & Automation
-
-Our CI/CD pipeline, defined in `.github/workflows/ci.yml`, includes automated security checks such as dependency vulnerability scanning and static analysis to proactively identify potential issues.
-
----
+Thank you for helping keep PostureGuard and its users safe.
