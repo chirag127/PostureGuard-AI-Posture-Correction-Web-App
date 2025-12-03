@@ -22,105 +22,56 @@
 ---
 
 ## 3. CONTEXT-AWARE APEX TECH STACKS (LATE 2025 STANDARDS)
-**Directives:** Detect the project type and apply the corresponding **Apex Toolchain**. This repository, `PostureGuard-AI-Posture-Correction-Web-App`, is a modern web application leveraging TypeScript and Tauri.
+**Directives:** Detect the project type and apply the corresponding **Apex Toolchain**. This repository, `PostureGuard-AI-Posture-Correction-Desktop-App`, is a Desktop Application built with TypeScript, React, Vite, and Tauri.
 
 *   **PRIMARY SCENARIO: WEB / APP / GUI (Modern Frontend)**
-    *   **Stack:** This project utilizes **TypeScript 6.x** (with strict configuration), **Vite 7** (powered by Rolldown for build speed), **Tailwind CSS v4** (for utility-first styling), and **Tauri v2.x** (for native desktop application packaging). 
-    *   **Linting & Formatting:** **Biome** is the mandated tool for extremely fast linting, formatting, and code analysis.
-    *   **Testing:** **Vitest** handles unit and integration tests, while **Playwright** is utilized for end-to-end (E2E) testing.
-    *   **Architecture:** Employs the **Feature-Sliced Design (FSD)** pattern for robust modularity and maintainability.
-    *   **AI Integration:** Integrates with **OpenCV.js** or a similar client-side computer vision library for real-time pose estimation directly in the browser. **Cloud-based AI APIs (e.g., Google Cloud Vision, AWS Rekognition)** may be used for more complex analysis if client-side processing is insufficient, prioritizing privacy and performance.
-    *   **State Management:** Leverages **Signals** as the standardized approach for reactive state management.
+    *   **Stack:** This project leverages **TypeScript 6.x (Strict)**, **Vite 7** (with Rolldown bundler), **React 20 (with Signals)**, and **Tauri v2.x** for native desktop capabilities.
+    *   **Linting & Formatting:** **Biome 16** is mandated for its exceptional speed and comprehensive code quality features, replacing ESLint and Prettier.
+    *   **Testing:** **Vitest 18** for unit and integration tests, leveraging its speed and Jest compatibility. **Playwright 2.0** for end-to-end testing, ensuring robust cross-platform validation.
+    *   **Architecture:** Adheres to **Feature-Sliced Design (FSD)** principles for maintainable and scalable frontend architecture.
+    *   **State Management:** Employ **Signals** (e.g., Preact Signals or SolidJS Signals adapted for React) as the standardized state management solution for reactive UI updates.
+    *   **Styling:** **Tailwind CSS v4** for rapid UI development and consistent theming.
 
-*   **SECONDARY SCENARIO B: SYSTEMS / PERFORMANCE (Low Level) - *Not directly applicable. Reference only.***
-    *   **Stack:** Rust (Cargo) or Go (Modules).
-    *   **Lint:** Clippy / GolangCI-Lint.
-    *   **Architecture:** Hexagonal Architecture (Ports & Adapters).
-
-*   **TERTIARY SCENARIO C: DATA / AI / SCRIPTS (Python) - *Not directly applicable. Reference only.***
-    *   **Stack:** uv (Manager), Ruff (Linter), Pytest (Test).
-    *   **Architecture:** Modular Monolith or Microservices.
+*   **SECONDARY SCENARIO B: SYSTEMS / PERFORMANCE (Low Level) - *Not applicable for this project.***
+*   **SECONDARY SCENARIO C: DATA / AI / SCRIPTS (Python) - *Not applicable for this project.***
 
 ---
 
-## 4. DEVELOPMENT & VERIFICATION PROTOCOLS
-*   **Setup:** Standardized `git clone`, followed by `uv install` (or `npm install`/`yarn install` if primarily frontend). Execute `biome ci` for linting and formatting checks.
-*   **Execution:** Run development servers via Vite (`vite`) or application entry points (`cargo run`, `go run`, `python main.py`).
-*   **Testing:** Execute all tests using `vitest` (unit/integration) and `npx playwright test` (E2E). Ensure `cargo test` or `pytest` are used for respective stacks.
-*   **Build:** Utilize `tauri build` for native application packaging, `vite build` for frontend assets, or standard build tools for other languages.
+## 4. ARCHIVAL PROTOCOL
+*   **DEACTIVATION STANDARD:** Repositories marked for archival are considered "Retired Products." They must still maintain the highest standard of documentation, metadata, and professional presentation. The **NAME**, **DESCRIPTION**, and **TOPICS** must be updated to reflect their final, professional state. All generated files (`README.md`, `LICENSE`, `.gitignore`, etc.) must be fully generated as if the project were active, but reflect its retired status appropriately.
 
 ---
 
-## 5. ARCHITECTURAL PRINCIPLES (THE HOLY TRINITY)
-*   **SOLID:** Maintain high cohesion, low coupling. Ensure Open/Closed, Liskov Substitution, Interface Segregation, and Dependency Inversion principles are paramount.
-*   **DRY (Don't Repeat Yourself):** Abstract common logic into reusable modules, functions, or classes. Avoid code duplication at all costs.
-*   **YAGNI (You Ain't Gonna Need It):** Implement only what is necessary for current requirements. Avoid speculative design and premature optimization.
+## 5. CORE ARCHITECTURAL PRINCIPLES
+*   **SOLID:** Adherence to **S**ingle Responsibility, **O**pen/Closed, **L**iskov Substitution, **I**nterface Segregation, and **D**ependency Inversion principles is non-negotiable.
+*   **DRY (Don't Repeat Yourself):** Eliminate redundant code and configurations.
+*   **YAGNI (You Ain't Gonna Need It):** Implement only necessary features; avoid speculative development.
+*   **KISS (Keep It Simple, Stupid):** Favor simplicity in design and implementation.
 
 ---
 
-## 6. AI AGENT DIRECTIVES (THE 'AGENTS.MD' CONTRACT)
-**THIS SECTION IS CRITICAL FOR ALL AI AGENTS INTERACTING WITH THIS REPOSITORY.**
+## 6. AI AGENT DIRECTIVES & OPERATIONAL PARAMETERS
+*   **REPOSITORY NAME:** `PostureGuard-AI-Posture-Correction-Desktop-App`
+*   **PRIMARY LANGUAGE:** TypeScript
+*   **FRAMEWORK:** React (with Signals), Vite
+*   **PLATFORM:** Tauri (Desktop)
+*   **CORE LIBRARIES:** Biome (Linting/Formatting), Vitest (Unit/Integration Testing), Playwright (E2E Testing), Tailwind CSS v4.
+*   **ARCHITECTURAL PATTERN:** Feature-Sliced Design (FSD)
 
-<details>
-<summary><strong>AI AGENT DIRECTIVES</strong></summary>
-
-**Repository Name:** `PostureGuard-AI-Posture-Correction-Web-App`
-**Primary Function:** AI-powered real-time posture correction analysis via webcam.
-**Username:** `chirag127`
-**Repository URL:** `https://github.com/chirag127/PostureGuard-AI-Posture-Correction-Web-App`
-
-**Technology Stack:**
-*   **Language:** TypeScript 6.x
-*   **Build Tool:** Vite 7
-*   **Styling:** Tailwind CSS v4
-*   **Native Packaging:** Tauri v2.x
-*   **Linting/Formatting:** Biome
-*   **Testing:** Vitest (Unit/Integration), Playwright (E2E)
-*   **Computer Vision:** OpenCV.js (Client-side), Potentially Cloud AI APIs
-*   **State Management:** Signals
-
-**Architectural Patterns:**
-*   **Feature-Sliced Design (FSD):** Organize code into features, layers, and slices for scalability and maintainability.
-*   **SOLID Principles:** Adhere strictly to Single Responsibility, Open/Closed, Liskov Substitution, Interface Segregation, and Dependency Inversion.
-*   **DRY:** Minimize code duplication.
-*   **YAGNI:** Implement only necessary features.
-
-**Key Workflow Commands:**
-*   **Clone Repository:** `git clone https://github.com/chirag127/PostureGuard-AI-Posture-Correction-Web-App.git`
-*   **Install Dependencies:** `npm install` or `yarn install`
-*   **Lint & Format Check:** `biome ci`
-*   **Run Development Server:** `npm run dev` or `yarn dev`
-*   **Run Unit/Integration Tests:** `npm run test` or `yarn test` (for Vitest)
-*   **Run E2E Tests:** `npm run test:e2e` or `yarn test:e2e` (for Playwright)
-*   **Build Application:** `npm run build` or `yarn build`
-*   **Package Native App:** `npm run tauri:build` or `yarn tauri:build`
-
-**AI Model Interaction:**
-*   **Primary CV Library:** OpenCV.js (ensure version compatibility)
-*   **Posture Estimation Model:** Utilize pre-trained models (e.g., MoveNet, PoseNet) integrated with OpenCV.js or provide clear instructions for model loading.
-*   **Cloud API Usage (If applicable):** Configure API keys securely via environment variables (`.env`). Refer to `src/services/ai-api.ts` for abstraction layer.
-
-**Security Mandates:**
-*   **Client-Side Data:** Minimize sensitive data processed client-side. If webcam data is processed locally, ensure it is ephemeral.
-*   **API Keys:** Never hardcode API keys. Use `.env` files and Tauri's secure asset handling.
-*   **Dependency Management:** Regularly scan dependencies for vulnerabilities using `npm audit` or `yarn audit`.
-
-**Verifications:**
-*   **Linting:** `biome check --apply` (to auto-fix where applicable).
-*   **Type Checking:** `tsc --noEmit`.
-*   **E2E Testing:** `npx playwright test` must pass for all core user flows.
-
-**DO NOT:**
-*   Introduce legacy technologies.
-*   Ignore linting/formatting errors.
-*   Hardcode sensitive information.
-*   Introduce breaking changes without thorough E2E testing.
-
-</details>
+**Execution Mandates:**
+1.  **Build & CI:** All workflows must be configured via `.github/workflows/ci.yml` using GitHub Actions. The primary goal is to test, lint, and build the application for all target platforms (macOS, Windows, Linux).
+2.  **Code Quality:** **Biome 16** is the sole tool for linting (`biome lint`) and formatting (`biome format`). All commits must pass Biome checks.
+3.  **Testing:** Execute tests using `vitest run` for unit/integration and `npx playwright test` for E2E.
+4.  **Dependencies:** Managed via `npm` or `yarn` (if specified), with strict version pinning for production builds.
+5.  **Security:** Implementations must consider `tauri-plugin-stronghold` for secure storage. Regularly scan dependencies for vulnerabilities. Adhere to OWASP Top 10 principles for desktop applications.
+6.  **Documentation:** Maintain comprehensive `README.md`, `CONTRIBUTING.md`, `CODE_OF_CONDUCT.md`, `SECURITY.md`, and issue/PR templates.
+7.  **Licensing:** Use `CC BY-NC 4.0`.
+8.  **AI MODEL INTERACTION (if applicable):** Analyze input data (webcam feed) using established pose estimation libraries (e.g., MediaPipe, TensorFlow.js). Process pose data to identify deviations from ergonomic best practices. Provide real-time feedback to the user.
 
 ---
 
-## 7. AGENTS.MD VALIDATION PROTOCOL
-*   **Self-Referential Integrity:** This document (`AGENTS.MD`) must be the source of truth for AI agent directives.
-*   **Dynamic Updates:** Any modifications to the tech stack, architecture, or key commands MUST be reflected here *immediately*.
-*   **Consistency Enforcement:** Ensure all generated files (README, workflows, etc.) align with the directives herein.
+## 7. COMMUNICATION PROTOCOL
+*   **EXTERNAL APIS:** Document and validate ALL external API integrations. Use `docfork` before implementation.
+*   **ERROR HANDLING:** Implement robust, context-aware error handling and logging. Utilize standard error codes and clear messages.
+*   **VERSION CONTROL:** All code must be committed to Git. Branching strategy follows Gitflow principles, adapted for high-velocity development.
+*   **DOCUMENTATION AS CODE:** All documentation, including `AGENTS.md`, `README.md`, and architecture diagrams, must be version-controlled and kept up-to-date.
