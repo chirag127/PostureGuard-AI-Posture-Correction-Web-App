@@ -1,61 +1,101 @@
-# Contributing to PostureGuard-AI-Posture-Correction-Web-App
+# Contributing to PostureGuard
 
-Thank you for your interest in contributing to PostureGuard! We welcome contributions from everyone.
+First, thank you for considering contributing to PostureGuard. This project adheres to the highest standards of software engineering, and we welcome contributions that align with our core principles of precision, performance, and user-centric design.
 
-## Code of Conduct
+Following these guidelines helps to communicate that you respect the time of the developers managing and developing this open source project. In return, they should reciprocate that respect in addressing your issue, assessing changes, and helping you finalize your pull requests.
 
-Please read and adhere to our [Code of Conduct](.github/SECURITY.md) to ensure a welcoming and inclusive community.
+## 🚀 Core Philosophy
 
-## How to Contribute
+We operate on a "Zero-Defect, High-Velocity, Future-Proof" philosophy. All contributions should be:
 
-1.  **Fork the Repository:** Create a fork of the `chirag127/PostureGuard-AI-Posture-Correction-Web-App` repository to your GitHub account.
-2.  **Clone Your Fork:** Clone the forked repository to your local machine:
+- **Well-Architected:** Adhering to established design patterns like Feature-Sliced Design (FSD) and SOLID principles.
+- **Rigorously Tested:** Covered by unit, integration, and end-to-end tests where applicable.
+- **Cleanly Coded:** Formatted and linted using our strict Biome configuration.
+
+##  Prerequisites
+
+Before you begin, ensure you have the following installed:
+
+- [Node.js](https://nodejs.org/) (LTS version)
+- [Rust & Cargo](https://www.rust-lang.org/tools/install) (for Tauri)
+- [pnpm](https://pnpm.io/installation) (recommended package manager)
+
+## 🛠️ Development Setup
+
+1.  **Fork the repository:**
+    Click the "Fork" button at the top right of the [PostureGuard repository page](https://github.com/chirag127/PostureGuard-AI-Posture-Correction-Desktop-App).
+
+2.  **Clone your fork:**
     bash
-    git clone https://github.com/YOUR-USERNAME/PostureGuard-AI-Posture-Correction-Web-App.git
-    cd PostureGuard-AI-Posture-Correction-Web-App
+    git clone https://github.com/YOUR_USERNAME/PostureGuard-AI-Posture-Correction-Desktop-App.git
+    cd PostureGuard-AI-Posture-Correction-Desktop-App
     
-3.  **Create a Branch:** Create a new branch for your contribution. Use a descriptive name:
+
+3.  **Install dependencies:**
     bash
-    git checkout -b feature/your-feature-name
+    pnpm install
     
-4.  **Make Your Changes:** Implement your changes, ensuring they align with the project's coding standards and architecture. See the [AI Agent Directives](#ai-agent-directives) in the README.
-5.  **Commit Your Changes:** Commit your changes with clear and concise commit messages. Follow the [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/) standard.
+
+4.  **Run the development server:**
+    This command will start the Vite frontend and the Tauri backend in development mode.
     bash
-    git commit -m "feat: implemented new feature"
+    pnpm tauri dev
     
-6.  **Push Your Changes:** Push your branch to your forked repository:
+
+## Linting and Formatting
+
+We use [Biome](https://biomejs.dev/) for ultra-fast code formatting and linting. All code must pass Biome checks before a Pull Request can be merged.
+
+- **Check for issues:**
+  bash
+  pnpm lint:check
+  
+
+- **Automatically fix issues:**
+  bash
+  pnpm lint:fix
+  
+
+## 提交 Commit Message Convention
+
+We enforce the [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) specification. This convention liaises with semantic versioning by describing the features, fixes, and breaking changes made in commit messages.
+
+Your commit messages should be structured as follows:
+
+
+<type>[optional scope]: <description>
+
+[optional body]
+
+[optional footer(s)]
+
+
+**Example:**
+`feat(auth): implement passwordless email login`
+`fix(ui): correct button alignment on settings page`
+
+## Pull Request (PR) Process
+
+1.  Create a new branch from `main` with a descriptive name (e.g., `feat/new-camera-filter` or `fix/login-bug`).
     bash
-    git push origin feature/your-feature-name
+    git checkout -b feat/your-new-feature
     
-7.  **Create a Pull Request:** Create a pull request from your branch to the `main` branch of the original repository.
+2.  Make your changes, adhering to the coding standards and architectural principles.
+3.  Ensure all linting checks pass: `pnpm lint:check`.
+4.  Commit your changes using the Conventional Commits format.
+5.  Push your branch to your forked repository.
+    bash
+    git push origin feat/your-new-feature
+    
+6.  Open a Pull Request to the `main` branch of the [original repository](https://github.com/chirag127/PostureGuard-AI-Posture-Correction-Desktop-App).
+7.  Fill out the PR template, linking any relevant issues (e.g., `Closes #123`).
+8.  The PR will be reviewed, and once approved, it will be merged by a maintainer.
 
-## Development Guidelines
+## Reporting Bugs and Suggesting Features
 
-*   **Code Style:** Follow the project's code style, enforced by Biome for linting and formatting.  Ensure your code passes the linting checks.
-*   **Testing:** Write unit tests using Vitest and E2E tests using Playwright. Ensure your tests pass before submitting a pull request.
-*   **Documentation:** Update the documentation if you add new features or change existing ones. Ensure your changes are well-documented.
-*   **Pull Request Template:** Use the pull request template provided (`.github/PULL_REQUEST_TEMPLATE.md`) to structure your pull request.
-*   **Issue Template:** Use the issue templates provided (`.github/ISSUE_TEMPLATE/`) to report bugs, suggest features, or ask questions.
+Please use the GitHub Issues tab to report bugs or suggest enhancements. Use our provided templates to ensure you include all necessary information:
 
-## Tech Stack and Tools
+-   [**Report a Bug**](https://github.com/chirag127/PostureGuard-AI-Posture-Correction-Desktop-App/issues/new?template=bug_report.md)
+-   **Request a Feature** (Template will be available)
 
-This project uses the following technologies:
-
-*   **Frontend:** React, TypeScript, Vite, TailwindCSS, Tauri.
-*   **Testing:** Vitest (Unit Tests), Playwright (E2E Tests).
-*   **Linting/Formatting:** Biome.
-
-## Getting Started
-
-1.  **Install Node.js and npm:** Make sure you have Node.js (version 18 or higher) and npm (version 8 or higher) installed.
-2.  **Install Dependencies:** Run `npm install` in the project root to install the necessary dependencies.
-3.  **Run the Development Server:** Run `npm run dev` to start the development server.
-4.  **Build the Application:** Run `npm run build` to build the application for production.
-5.  **Run Tests:** Run `npm test` for unit tests and `npm run e2e` for end-to-end tests.
-
-## Communication
-
-*   For general questions and discussions, please use the issue tracker.
-*   For security-related issues, please refer to the [Security Policy](.github/SECURITY.md).
-
-Thank you again for contributing! Your help is greatly appreciated.
+Thank you for making PostureGuard better!
