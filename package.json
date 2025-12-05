@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "expo": "~52.0.47",
-    "expo-camera": "~16.0.17",
+    "expo-camera": "~16.1.11",
     "expo-haptics": "~14.0.1",
     "expo-status-bar": "~2.2.3",
     "react": "18.3.1",
